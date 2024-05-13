@@ -95,4 +95,32 @@ public class Job {
     public CoreCompetency getCoreCompetency() {
         return coreCompetency;
     }
+
+    @Override
+    public String toString() {
+        if (name.isEmpty() && employer.getValue().isBlank() && location.getValue().isBlank() && positionType.getValue().isBlank() && coreCompetency.getValue().isBlank()) {
+            String oops = "OOPS! this job does not seem to exist.";
+        }
+        if (employer.getValue().isBlank() || employer.getValue() == null) {
+            employer.setValue("Data not available");
+        }
+        if (location.getValue().isBlank() || location.getValue() == null) {
+            location.setValue("Data not available");
+        }
+        if (positionType.getValue().isBlank() || positionType.getValue() == null) {
+            positionType.setValue("Data not available");
+        }
+        if (coreCompetency.getValue().isBlank() || coreCompetency.getValue() == null) {
+            coreCompetency.setValue("Data not available");
+        }
+
+        return  System.lineSeparator() +
+                "ID: " + id + System.lineSeparator() +
+                "Name: " + name + System.lineSeparator() +
+                "Employer: " + employer + System.lineSeparator() +
+                "Location: " + location + System.lineSeparator() +
+                "Position Type: " + positionType + System.lineSeparator() +
+                "Core Competency: " + coreCompetency +
+                System.lineSeparator();
+    }
 }
