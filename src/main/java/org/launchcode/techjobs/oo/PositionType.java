@@ -8,6 +8,7 @@ public class PositionType extends JobField {
         super(value);
     }
 
+
     // TODO: Add a custom toString() method that returns the data stored in 'value'.
 
 //    @Override
