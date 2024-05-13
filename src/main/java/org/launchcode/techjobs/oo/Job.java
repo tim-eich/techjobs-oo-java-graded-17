@@ -98,8 +98,8 @@ public class Job {
 
     @Override
     public String toString() {
-        if (name.isEmpty() && employer.getValue().isBlank() && location.getValue().isBlank() && positionType.getValue().isBlank() && coreCompetency.getValue().isBlank()) {
-            String oops = "OOPS! this job does not seem to exist.";
+        if (name == null && employer == null && location == null && positionType == null && coreCompetency == null) {
+            return "OOPS! this job does not seem to exist.";
         }
         if (employer.getValue().isBlank() || employer.getValue() == null) {
             employer.setValue("Data not available");

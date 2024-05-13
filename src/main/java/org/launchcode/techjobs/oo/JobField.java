@@ -9,7 +9,7 @@ public abstract class JobField {
     private String value;
 
     public JobField() {
-        id = nextId;
+        this.id = nextId;
         nextId++;
     }
 
