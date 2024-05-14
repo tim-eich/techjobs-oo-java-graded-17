@@ -31,20 +31,22 @@ public abstract class JobField {
     }
 
     @Override
-    public String toString() {
-        return value;
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         JobField jobField = (JobField) o;
-        return getId() == jobField.getId();
+        return id == jobField.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(getId());
+        return Objects.hashCode(id);
     }
+
+    @Override
+    public String toString() {
+        return value;
+    }
+
+
 }
