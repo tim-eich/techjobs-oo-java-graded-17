@@ -16,18 +16,18 @@ public class JobTest {
 
     @Test
     public void testJobConstructorSetsAllFields() {
-//        Job newJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-//        assertEquals("Product tester", newJob.getName());
-//        // Ask Dan
-//        assertTrue(newJob.getName() instanceof String);
-//        assertEquals("ACME", newJob.getEmployer());
-//        assertTrue(newJob.getEmployer() instanceof Employer);
-//        assertEquals("Desert", newJob.getLocation() );
-//        assertTrue(newJob.getLocation() instanceof Location);
-//        assertEquals("Quality control", newJob.getPositionType());
-//        assertTrue(newJob.getPositionType() instanceof PositionType);
-//        assertEquals("Persistence", newJob.getCoreCompetency());
-//        assertTrue(newJob.getCoreCompetency() instanceof CoreCompetency);
+        Job newJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertEquals("Product tester", newJob.getName());
+        // Ask Dan
+        assertNotNull(newJob.getName());
+        assertEquals("ACME", newJob.getEmployer().getValue());
+        assertNotNull(newJob.getEmployer());
+        assertEquals("Desert", newJob.getLocation().getValue());
+        assertNotNull(newJob.getLocation());
+        assertEquals("Quality control", newJob.getPositionType().getValue());
+        assertNotNull(newJob.getPositionType());
+        assertEquals("Persistence", newJob.getCoreCompetency().getValue());
+        assertNotNull(newJob.getCoreCompetency());
     }
 
     @Test
