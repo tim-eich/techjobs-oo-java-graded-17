@@ -18,7 +18,6 @@ public class JobTest {
     public void testJobConstructorSetsAllFields() {
         Job newJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertEquals("Product tester", newJob.getName());
-        // Ask Dan
         assertNotNull(newJob.getName());
         assertEquals("ACME", newJob.getEmployer().getValue());
         assertNotNull(newJob.getEmployer());
